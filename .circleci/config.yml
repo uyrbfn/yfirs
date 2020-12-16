@@ -6,7 +6,7 @@ version: 2
 jobs:
   build:
     docker:
-     image: circleci/golang:1.9
+      - image: circleci/golang:1.9
     steps:
       - run: ls
       - run: sudo apt-get update
